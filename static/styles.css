@@ -1,0 +1,61 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+body{
+    background-color: black;
+    background-image: url('/static/bg-asset.png');
+}
+
+*{
+    font-family: 'Fira Code', monospace;
+    color: white;
+}
+
+h1{
+    font-size: 4rem;
+}
+
+.parent-container{
+    height:98vh;
+    display:flex;
+    flex-direction: row;
+
+}
+
+.description{
+    font-size: 1.2rem;
+    width:70%;
+    margin-bottom: 5rem;
+    text-align: left;
+    text-wrap: wrap;
+}
+
+.upper-container{
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 3rem;
+}
+
+.lower-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 12rem;
+}
+
+.submit {
+    display: block;
+    align-items: center;
+    background-color: transparent;
+    border: solid 1px yellow;
+    width: 10rem;
+    padding: 1rem;
+    cursor: pointer;
+    font-display: auto;
+    text-align: center; 
+    margin-right: 1cm;
+}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+</head>
+<body>
+    <h1>Result</h1>
+
+    {% for path in video_paths %}
+        <div>
+            <p>Result: {{ path }}</p>
+            <video controls>
+                <source src="{{ url_for('uploaded_file', filename=path) }}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    {% endfor %}
+
+</body>
+</html>

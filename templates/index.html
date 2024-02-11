@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>Upload Reference Image</title>
+</head>
+<body>
+    <div class="parent-container">
+        <div class="upper-container">
+            <h1>God's Eye</h1>
+            <div class="description">Welcome to the future of security God's Eye, your cutting-edge solution for intelligent surveillance. <br>
+                Tired of sifting through hours of footage to find a critical moment? Say goodbye to the old way and embrace the future with God’s Eye.  </div>
+        </div>
+        <div class="lower-container">
+            <form action="/upload" method="post" enctype="multipart/form-data" id="uploadForm">
+                <label for="fileInput" class="submit">Upload</label>
+                <input type="file" name="file" accept="image/*" id="fileInput" style="display: none;" onchange="displayFileName(this)">
+                <input type="submit" value="HiddenSubmit" style="display: none;">
+            </form>
+            <div id="fileNameDisplay"></div>
+        </div>
+    </div>
+
+    <script>
+        function displayFileName(input) {
+            var fileName = input.files[0].name;
+            document.getElementById('fileNameDisplay').innerHTML = 'Selected file: ' + fileName;
+            document.getElementById('uploadForm').submit();
+        }
+    </script>
+</body>
+</html>
